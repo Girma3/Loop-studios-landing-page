@@ -1,0 +1,135 @@
+ @import url('https://fonts.googleapis.com/css2?family=Alata&family=Barlow+Semi+Condensed:wght@600&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    font-family: 'Alata',monospace,sans-serif;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+   
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 1.5rem;
+}
+
+.humburger{
+    display: none;
+   
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    /* -webkit-transition: all 0.3s ease-in-out; */
+    transition: all 0.3s ease-in-out;
+    background-color: #ac11b4;
+}
+.nav-menu{
+display: flex;
+justify-content: space-between;
+align-items: center;
+}
+.nav-item{
+    margin-left: 5rem;
+   
+}
+.nav-link{
+    font-size: 1rem;
+    font-weight: 300;
+    color: white;
+}
+.nav-link:hover{
+    border-bottom:5px solid rgb(227, 247, 2);
+   
+}
+.nav-logo{
+    font-size: 1.5rem;
+    font-weight: 400;
+    color:white;
+}
+.nav-logo:hover{
+    border-bottom:3px #20f005 dashed;
+}
+
+
+ @media (max-width:780px) {
+   .nav-menu{
+ /* show the humberger and hide nav-menu */
+    position:fixed;
+
+     flex-direction: column;
+     top:5rem;
+     left:-100%;
+     background-color: #3a1919;
+     border-radius: 0.5rem;
+     text-align: center;
+     width: 40%;
+     box-shadow: 10px 10px;
+     transition: 0.3s;
+   }
+   .nav-menu.active{
+    left: 0; 
+    background-color: rgb(223, 178, 217);
+   }
+   .nav-item{
+    margin: 2rem 0;
+   
+   }
+   .humburger{
+    display: block;
+    cursor: pointer;
+   }
+   /* use the active class on the hamburger to create
+    that X animation when we click on the hamburger */
+    .humburger.active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    .humburger.active .bar:nth-child(1) {
+       
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    .humburger.active .bar:nth-child(3) {
+       
+        transform: translateY(-8px) rotate(-45deg);
+    }
+}  
+
+/* hero area created */
+
+
+ .hero{
+    background-color: #ac11b4;
+   background-image: url(design/images/desktop/image-hero.jpg);
+   background-repeat: no-repeat;
+   background-size: cover;
+  padding: 1rem;
+  
+} 
+.hero-text{
+    box-sizing: border-box;
+   margin: auto;
+   width: 13rem;
+   padding: 0.5rem;
+   margin-left:2rem;
+   margin-top: 1rem;
+   border: 0.2rem solid whitesmoke;
+    font-size:2rem;
+    color: aliceblue;
+}
+.hero-text:hover{
+  color:rgb(227, 247, 2);
+    border-color: rgb(9, 255, 0);
+}
