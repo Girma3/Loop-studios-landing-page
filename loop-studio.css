@@ -219,3 +219,21 @@ button:hover{
     background-color: #e863ef;
     
 }
+/* footer */
+.sub-container{
+   text-align: center;
+    background-color:black;
+    color: white;
+    padding: 1.5rem;
+}
+.services{
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   margin: 1rem;
+}
+.logo{
+    font-size: 2rem;
+    color: #6cf35a;
+}
