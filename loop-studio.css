@@ -63,6 +63,7 @@ align-items: center;
 }
 .nav-logo:hover{
     border-bottom:3px #20f005 dashed;
+    color: #d4e300f6;
 }
 
 
@@ -118,12 +119,12 @@ align-items: center;
    background-image: url(design/images/desktop/image-hero.jpg);
    background-repeat: no-repeat;
    background-size: cover;
-  padding: 1rem;
+   padding: 1rem;
   
 } 
 .hero-text{
    
-    box-sizing: border-box;
+   box-sizing: border-box;
    margin: auto;
    width: 15rem;
    padding: 0.5rem;
@@ -131,24 +132,23 @@ align-items: center;
    margin-top: 1rem;
    border: 0.2rem solid whitesmoke;
    font-family: 'Josefin Sans', sans-serif;
-    font-size:2rem;
-    color: aliceblue;
+   font-size:2rem;
+   color: aliceblue;
 }
 .hero-text:hover{
-  color:rgb(227, 247, 2);
+    color:rgb(227, 247, 2);
     border-color: rgb(9, 255, 0);
 }
 /* second part of the page  */
 .section-1{
-    margin-top: 1rem;
-    font-family: 'Josefin Sans', sans-serif;
+   padding: 2rem;
 }
 img{
     max-width: 100%;
- 
     display: block;
 }
 .img-container{ 
+    width: 100%;
     height: 20rem;
     background-color: #4afc09;
     background-image: url(design/images/mobile/image-interactive.jpg);
@@ -177,6 +177,7 @@ p{
     color: hsl(0, 0%, 55%);
     box-sizing: border-box;
     padding: 1rem;
+    
    
 }
 /* section 2 the gallery part */
@@ -223,11 +224,11 @@ background-image: url(design/images/mobile/image-fisheye.jpg);
     font-family: 'Josefin Sans', sans-serif;
     position: absolute;
     box-sizing: border-box;
-    
-    bottom:10%;
+    bottom:8%;
     left:20%;
     font-size: 2rem;
 }
+
 button{
     font-family: 'Josefin Sans', sans-serif;
     font-weight: 400;
@@ -238,29 +239,58 @@ button{
     border-radius: 3px;
 }
 button:hover{
-    background-color: #e863ef;
+    background-color: #030303;
+    color: white;
     
+}
+
+/* hover effect on cards */
+.card-1:hover,.card-2:hover,.card-3:hover,.card-4:hover,
+.card-5:hover,.card-6:hover,.card-7:hover,.card-8:hover{
+    opacity: 0.6;
+    color: #13e300f6;
+   font-weight: 900;
+   
 }
 /* footer */
 .sub-container{
    text-align: center;
     background-color:black;
     color: white;
-    padding: 1.5rem;
+    padding: 2rem;
 }
 .services{
    display: flex;
    flex-direction: column;
    align-items: center;
+   gap: 1rem;
    justify-content: space-between;
    margin: 1rem;
+}
+.service:hover{
+    border-bottom:3px solid #de00ea;
 }
 .logo{
     font-size: 2rem;
     color: #6cf35a;
 }
-/* design for above 780px screnn */
-@media (min-width:780px){
+.logo:hover{
+    color: #de00ea;
+}
+.copyright:hover{
+    color: #de00ea;
+}
+.facebook-icon,.twitter-icon,.pinterest-icon,.instagram-icon{
+    margin: 0.5rem;
+}
+.facebook-icon:hover,.twitter-icon:hover,.pinterest-icon:hover,.instagram-icon:hover{
+background-color: rgb(141, 51, 2);
+
+
+}
+
+/* design for above 780px screen */
+@media (min-width:900px){
 .section-1{
     position: relative;
     display: grid;
@@ -280,9 +310,9 @@ button:hover{
 }
 .article{
 position: absolute;
-width: 35%;
-right:22%;
-bottom: 0;
+width: 50%;
+right:8%;
+bottom: 8%;
 background-color:white;
 }
 
@@ -299,6 +329,7 @@ background-color:white;
 }
 button{
     grid-area: btn;
+    justify-self: end;
 }
 .title{
     grid-area: title;
@@ -337,5 +368,38 @@ button{
 }
 .card-8{
 background-image: url(design/images/desktop/image-fisheye.jpg);
+}
+/* footer */
+.sub-container{
+    display: grid;
+   
+    grid-template-columns:  1fr 1fr;
+    grid-template-rows:  1fr 1fr;
+    grid-template-areas: 
+    'logo icons'
+    'services copyright';
+}
+.logo{
+    margin-left: 2rem;
+    grid-area: logo;
+  justify-self: start;  
+  
+}
+.services{
+    justify-self: self-start;
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-area: services;
+}
+.icons{
+    justify-self: self-end;
+    align-self: center;
+    grid-area: icons;
+    gap: 1rem;
+}
+.copyright{
+    justify-self: end;
+    align-self: center;
+    grid-area: copyright;
 }
 }
